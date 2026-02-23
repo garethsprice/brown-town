@@ -1,6 +1,6 @@
 const Alexa = require('ask-sdk-core');
 
-const AUDIO_URL = 'https://brown-noise.s3.us-east-1.amazonaws.com/brown_noise.mp3';
+const AUDIO_URL = process.env.AUDIO_URL || 'https://example.s3.amazonaws.com/brown_noise.mp3';
 const TOKEN_PREFIX = 'brown-noise';
 
 const LAUNCH_PHRASES = [

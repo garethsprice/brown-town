@@ -34,7 +34,7 @@ Some things it will say to you on the way in:
 ## Project structure
 
 ```
-├── skill.json                          # Alexa skill manifest
+├── skill.json.example                  # Alexa skill manifest (template)
 ├── interactionModels/custom/en-US.json # Voice interaction model
 └── lambda/
     ├── index.js                        # Lambda handler (skill logic)
@@ -53,7 +53,8 @@ Some things it will say to you on the way in:
 ## Deploying your own
 
 1. Create an Alexa skill in the [Alexa Developer Console](https://developer.amazon.com/alexa/console/ask)
-2. Set up an AWS Lambda function with the code in `lambda/`
-3. Host your own brown noise MP3 in S3 (or wherever) and update the `AUDIO_URL` in `index.js`
-4. Connect the Lambda ARN to your skill endpoint
-5. Never pay for noise again
+2. Copy `skill.json.example` to `skill.json` and fill in your Lambda ARNs
+3. Set up an AWS Lambda function with the code in `lambda/`
+4. Host your own brown noise MP3 in S3 (or wherever) and set the `AUDIO_URL` environment variable on your Lambda
+5. Connect the Lambda ARN to your skill endpoint
+6. Never pay for noise again
